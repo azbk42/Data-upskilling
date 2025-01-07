@@ -5,7 +5,17 @@ import duckdb
 data = {'a': [1, 2, 3], 'b': [4, 5, 6]}
 df = pd.DataFrame(data)
 
-st.write("Hello World")
+st.write("""
+# SQL
+Space Repetition System SQL practice
+""")
+
+option = st.selectbox(
+    "What would you like to review?",
+    ("Join", "Group By", "Windows Functions"),
+    index=None,
+    placeholder="Select a theme..."
+)
 
 tab1, tab2, tab3 = st.tabs(['cat', 'chien', 'oiseau'])
 
@@ -23,3 +33,4 @@ with tab2:
 with tab3:
     input_tf = st.text_area(label="put tofewfwefwen texte:")
     st.write(input_tf)
+
