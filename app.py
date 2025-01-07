@@ -10,12 +10,13 @@ st.write("""
 Space Repetition System SQL practice
 """)
 
-option = st.selectbox(
-    "What would you like to review?",
-    ("Join", "Group By", "Windows Functions"),
-    index=None,
-    placeholder="Select a theme..."
-)
+with st.sidebar:
+    option = st.selectbox(
+        "What would you like to review?",
+        ("Join", "Group By", "Windows Functions"),
+        index=None,
+        placeholder="Select a theme..."
+    )
 
 tab1, tab2, tab3 = st.tabs(['cat', 'chien', 'oiseau'])
 
